@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "name": "sample-serverless",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.553.0",
+    "moment": "^2.24.0",
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "serverless-next.js": "^1.4.1",
+    "serverless-offline": "^5.12.0",
+    "underscore": "^1.9.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
