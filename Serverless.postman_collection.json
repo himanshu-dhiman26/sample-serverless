@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "562d0b80-1b25-42c2-8f79-cfd4e16808a5",
+		"name": "Serverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Blog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Item\": {\n\t\t\"title\": \"Something\",\n\t\t\"content\": \"adsadsdjhsajkdhkjsafgjksdkfhsasa\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs",
+					"protocol": "https",
+					"host": [
+						"4vtblvzdme",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Update Blog",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Item\": {\n\t\t\"title\": \"Something\",\n\t\t\"content\": \"adsadsdjhsajkdhkjsafgjsfkjsahdjsahdjksahkjdhsakjdhaskjdhkjsaksdkfhsasa\",\n\t\t\"timestamp\": 1571747908,\n\t\t\"blog_id\": \"1:38e78eaa-d628-47b6-86c6-dd036a9770a5\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs",
+					"protocol": "https",
+					"host": [
+						"4vtblvzdme",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Blogs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs",
+					"protocol": "https",
+					"host": [
+						"4vtblvzdme",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Single Blog",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/1:38e78eaa-d628-47b6-86c6-dd036a9770a5",
+					"protocol": "https",
+					"host": [
+						"4vtblvzdme",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"blogs",
+						"1:38e78eaa-d628-47b6-86c6-dd036a9770a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Single Blog",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "test",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/1:38e78eaa-d628-47b6-86c6-dd036a9770a5",
+					"protocol": "https",
+					"host": [
+						"4vtblvzdme",
+						"execute-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"blogs",
+						"1:38e78eaa-d628-47b6-86c6-dd036a9770a5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
