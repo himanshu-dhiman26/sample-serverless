@@ -6,7 +6,7 @@ const getUserName = (headers) => {
 	return headers.app_user_name;
 }
 
-const getResposneHeaders = () => {
+const getResponseHeaders = () => {
 	return {
 		"Access-Control-Allow-Origin": "*"
 	}
@@ -16,5 +16,5 @@ const getResposneHeaders = () => {
 module.exports = {
 	getUserId,
 	getUserName,
-	getResposneHeaders
+	getResponseHeaders
 };

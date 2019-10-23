@@ -23,6 +23,7 @@ module.exports.getBlogs = async event => {
 
     return {
       statusCode: 200,
+      headers: util.getResponseHeaders(),
       body: JSON.stringify(data)
     }
 
@@ -55,6 +56,7 @@ module.exports.getBlog = async event => {
 
     return {
       statusCode: 200,
+      headers: util.getResponseHeaders(),
       body: JSON.stringify(data)
     }
 
@@ -88,6 +90,7 @@ module.exports.addBlog = async event => {
 
     return {
       statusCode: 200,
+      headers: util.getResponseHeaders(),
       body: JSON.stringify(item)
     }
 
@@ -126,6 +129,7 @@ module.exports.updateBlog = async event => {
 
     return {
       statusCode: 200,
+      headers: util.getResponseHeaders(),
       body: JSON.stringify(item)
     }
 
@@ -159,6 +163,7 @@ module.exports.deleteBlog = async event => {
 
     return {
       statusCode: 200,
+      headers: util.getResponseHeaders(),
       body: JSON.stringify(data)
     }
 

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{Sh69:function(n,e,t){"use strict";t.r(e);var w=t("q1tI"),o=t.n(w).a.createElement;e.default=function(){return o("div",null,"Welcome to Next.js!")}},pwUJ:function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/View",function(){return t("Sh69")}])}},[["pwUJ",1,0]]]);
