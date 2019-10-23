@@ -93,9 +93,50 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Header.js":
+/***/ "./components/basicLayout.js":
+/*!***********************************!*\
+  !*** ./components/basicLayout.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ "./components/header.js");
+var _jsxFileName = "/Users/himanshudhiman/Projects/sample-serverless/components/basicLayout.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const layoutStyle = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD'
+};
+
+const Layout = props => __jsx("div", {
+  style: layoutStyle,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 10
+  },
+  __self: undefined
+}, __jsx(_header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}), props.children);
+
+/* harmony default export */ __webpack_exports__["default"] = (Layout);
+
+/***/ }),
+
+/***/ "./components/header.js":
 /*!******************************!*\
-  !*** ./components/Header.js ***!
+  !*** ./components/header.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -106,7 +147,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/himanshudhiman/Projects/sample-serverless/components/Header.js";
+var _jsxFileName = "/Users/himanshudhiman/Projects/sample-serverless/components/header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -165,47 +206,6 @@ const Header = () => __jsx("div", {
 }, "Create")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
-
-/***/ }),
-
-/***/ "./components/basicLayout.js":
-/*!***********************************!*\
-  !*** ./components/basicLayout.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
-var _jsxFileName = "/Users/himanshudhiman/Projects/sample-serverless/components/basicLayout.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-
-const Layout = props => __jsx("div", {
-  style: layoutStyle,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10
-  },
-  __self: undefined
-}, __jsx(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11
-  },
-  __self: undefined
-}), props.children);
-
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
 
@@ -1923,26 +1923,26 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Blog = props => __jsx(_components_basicLayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8
+    lineNumber: 6
   },
   __self: undefined
 }, __jsx("h1", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 7
   },
   __self: undefined
 }, props.blog.title), __jsx("p", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 8
   },
   __self: undefined
 }, props.blog.content), __jsx("button", {
   onClick: deletePost(props.blog.blog_id),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 10
   },
   __self: undefined
 }, "Delete"));
@@ -1964,14 +1964,16 @@ Blog.getInitialProps = async function (context) {
 };
 
 const deletePost = function (id) {
-  axios__WEBPACK_IMPORTED_MODULE_2___default.a.delete('https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/' + id, {
-    headers: {
-      "app_user_id": "test",
-      "app_user_name": "test"
-    }
-  }).then(response => {
-    next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/');
-  });
+  return function () {
+    axios__WEBPACK_IMPORTED_MODULE_2___default.a.delete('https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/' + id, {
+      headers: {
+        "app_user_id": "test",
+        "app_user_name": "test"
+      }
+    }).then(response => {
+      next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push('/');
+    });
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Blog);

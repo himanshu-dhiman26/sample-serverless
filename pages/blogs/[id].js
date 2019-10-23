@@ -2,8 +2,6 @@ import Layout from '../../components/basicLayout';
 import axios from 'axios';
 import Router from 'next/router';
 
-
-
 const Blog = props => (
   <Layout>
     <h1>{props.blog.title}</h1>
@@ -22,12 +20,14 @@ Blog.getInitialProps = async function(context) {
 };
 
 const deletePost = function(id) {
-  axios.delete(
-  	'https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/'+ id,
-  	{headers: {"app_user_id":"test", "app_user_name": "test"}}
-  ).then(response => {
-	  Router.push('/');
-  });
+	return function () {
+		  axios.delete(
+		  	'https://4vtblvzdme.execute-api.ap-south-1.amazonaws.com/dev/blogs/'+ id,
+		  	{headers: {"app_user_id":"test", "app_user_name": "test"}}
+		  ).then(response => {
+			  Router.push('/');
+		  });
+	  }
 }
 
 export default Blog;
